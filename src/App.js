@@ -1,8 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import ExampleComponent from './Components/ExampleComponent';
-import Login from './pages/Login';
+import Designation from './pages/Designation';
+import AllRole from './pages/AllRole';
+import GelAllEmploe from './pages/Employees/GelAllEmploe';
+import AddEmployee from './pages/Employees/AddEmployee';
 
 
 const App = () => {
@@ -13,13 +15,13 @@ const App = () => {
           <div className="container-fluid">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className='nav-link' to='/Login'>Login</Link>
+              <Link className='nav-link' to='/AllRole'>Get Roll</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to=''>All designation</Link>
+                <Link className='nav-link' to='/Designation'>Get Designation</Link>
               </li>
               <li className="nav-item">
-                <Link className='nav-link' to='/ExampleComponent'>Constants</Link>
+                <Link className='nav-link' to='/GelAllEmploe'>All Employee</Link>
               </li>
              
             </ul>
@@ -27,9 +29,11 @@ const App = () => {
         </nav>
 
         <Routes>
-          <Route path='/ExampleComponent'  element={<ExampleComponent></ExampleComponent>}></Route>
-          <Route path='/Login' element={<Login></Login>}></Route>
-        </Routes>
+          <Route path='/AllRole' element={<AllRole></AllRole>}></Route>
+          <Route path='/Designation' element={<Designation></Designation>}></Route>
+          <Route path='/GelAllEmploe' element={<GelAllEmploe></GelAllEmploe>}></Route>
+          <Route path='/AddEmployee' element={<AddEmployee></AddEmployee>}></Route>
+         </Routes>
       </BrowserRouter>
       
     </div>
