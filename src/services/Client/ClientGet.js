@@ -1,5 +1,5 @@
 import axios from "axios"
-const Employee =async ()=>{
+const ClientData =async ()=>{
     try{
         const result =await axios.get("https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllClients");
         return result.data;
@@ -9,4 +9,4 @@ const Employee =async ()=>{
         }
     }
 }
-export {Employee}
+export {ClientData}

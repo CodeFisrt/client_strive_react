@@ -1,14 +1,14 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Employee } from '../../services/ClientData';
+import {ClientData} from '../../services/Client/ClientGet';
 
 
-const ClientList = () => {
+const GelAllClient = () => {
     
     const [client,setClient] = useState([]);
  const loadClient = async()=>{
-    Employee().then(result =>{
+    ClientData().then(result =>{
         setClient(result.data)
   } )
  }
@@ -36,17 +36,15 @@ useEffect (()=>{
                             <thead>
                                 <tr>
                                     <th>Sr No</th>
-                                    <th>Client Id</th>
+                                  
                                     <th>Contact Person Name</th>
                                     <th>Company Name</th>
                                     <th>Address</th>
                                     <th>City</th>
                                     <th>Pincode</th>
                                     <th>State</th>
-                                    <th>Employee Strength</th>
-                                    <th>GSt No</th>
-                                    <th>Contact No</th>
-                                    <th>Reg No</th>
+                         <th>Contact No</th>
+                                    
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -54,18 +52,18 @@ useEffect (()=>{
                                 {
                                     client.map((item,index)=>{
                                         return (<tr>
-                                            <td>{index +1}</td>
-                                            <td>{item.clientId}</td>
+                                            <td>{index+1}</td>
+                                            
                                             <td>{item.contactPersonName}</td>
                                             <td>{item.companyName}</td>
                                             <td>{item.address}</td>
                                             <td>{item.city}</td>
                                             <td>{item.pincode}</td>
                                             <td>{item.state}</td>
-                                            <td>{item.employeeStrength}</td>
-                                            <td>{item.gstNo}</td>
+                                        
+                                         
                                             <td>{item.contactNo}</td>
-                                            <td>{item.regNo}</td>
+                                           
                                             <td>
                                                 <button className='btn btn-primary' >Edit</button>
                                                 <button className='btn btn-danger' >Delete</button>
@@ -80,4 +78,4 @@ useEffect (()=>{
     );
 };
 
-export default ClientList;
+export default GelAllClient;

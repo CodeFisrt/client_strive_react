@@ -7,8 +7,10 @@ import GelAllEmploe from './pages/Employees/GelAllEmploe';
 import AddEmployee from './pages/Employees/AddEmployee';
 // import ExampleComponent from './Components/ExampleComponent';
 // import Login from './pages/Login';
-import ClientList from './Components/Client/ClientList';
-import ClientForm from './Components/Client/ClientForm';
+
+import AddClient from './pages/Client/AddClient';
+
+import GelAllClient from './pages/Client/GetAllClient';
 
 
 const App = () => {
@@ -45,8 +47,8 @@ const App = () => {
 
           {/* <Route path='/ExampleComponent'  element={<ExampleComponent></ExampleComponent>}></Route> */}
           {/* <Route path='/Login' element={<Login></Login>}></Route> */}
-          <Route path="/list" element={<ClientList></ClientList>}></Route>
-    <Route path="/form" element={<ClientForm></ClientForm>}></Route>
+          <Route path="/list" element={<GelAllClient></GelAllClient>}></Route>
+    <Route path="/form" element={<AddClient></AddClient>}></Route>
         </Routes>
 
       </BrowserRouter>
