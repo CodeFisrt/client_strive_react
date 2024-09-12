@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { readEmp } from '../../services/Employee/EmployeeApi';
+// import { readEmp } from '../../services/Employee/EmployeeApi';
 import { useNavigate } from 'react-router-dom';
+import { readEmp } from '../../services/Employee/EmployeeApi';
 
 const GelAllEmploe = () => {
 const [emp,setEmp]=useState([]);
@@ -73,6 +74,11 @@ const onNavigateAddEmp=()=>{
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                {
+                    
+                }
             </div>
             
         </div>
