@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { readEmp } from '../../services/Employee/EmployeeApi';
 import { useNavigate } from 'react-router-dom';
 import { readEmp } from '../../services/Employee/EmployeeApi';
+import axios from 'axios';
 
 const GelAllEmploe = () => {
 const [emp,setEmp]=useState([]);
@@ -22,6 +23,19 @@ const history=useNavigate()
 const onNavigateAddEmp=()=>{
     history('/AddEmployee');
 
+}
+
+const onDelete=async(Id)=>{
+    const isActive=window.confirm("Are You Sure About Delete ?");
+    if(isActive){
+        const result=await axios.delete("https://freeapi.miniprojectideas.com/api/ClientStrive/DeleteEmployeeByEmpId?empId="+Id);
+    if(result.data.result){
+        alert("Employee Delted Sucess.");
+    }else{
+        alert(result.data.message);
+    }
+    }
+    
 }
 
 
@@ -64,7 +78,7 @@ const onNavigateAddEmp=()=>{
                                                 <td>{item.role}</td>
                                                 <td>
                                                     <button className='btn btn-primary'>Edit</button>
-                                                    <button className='btn btn-dengar'>Delete</button>
+                                                    <button className='btn btn-danger' onClick={()=>onDelete(item.empId)}>Delete</button>
                                                 </td>
                                             </tr>)
                                         })
