@@ -8,6 +8,8 @@ import AddEmployee from './pages/Employees/AddEmployee';
 import GelAllClient from './pages/Client/GetAllClient';
 import AddClient from './pages/Client/AddClient';
 import GetAllPayments from './pages/Payments/GetAllPayments';
+import GetAllMeetings from './pages/Meeting/GetAllMeetings';
+import AddMeetings from './pages/Meeting/AddMeetings';
 
 
 const App = () => {
@@ -34,6 +36,9 @@ const App = () => {
                 <Link class="nav-link" to="/GetAllPayments">Payments Details</Link>
               </li>
 
+              <li class="nav-item">
+                <Link class="nav-link" to="/GetAllMeetings">Meetings </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -47,6 +52,10 @@ const App = () => {
           <Route path='/list' element={<GelAllClient></GelAllClient>}></Route>
           <Route path='/form' element={<AddClient></AddClient>}></Route>
           <Route path='/GetAllPayments' element={<GetAllPayments></GetAllPayments>}></Route>
+          <Route path='/GetAllMeetings' element={<GetAllMeetings></GetAllMeetings>}></Route> 
+          <Route path='/AddMeetings' element={<AddMeetings></AddMeetings>}></Route> 
+
+
          
 
 
