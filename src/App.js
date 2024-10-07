@@ -10,6 +10,7 @@ import AddClient from './pages/Client/AddClient';
 import GetAllPayments from './pages/Payments/GetAllPayments';
 import GetAllMeetings from './pages/Meeting/GetAllMeetings';
 import AddMeetings from './pages/Meeting/AddMeetings';
+import AddPayments from './pages/Payments/AddPaymets';
 
 
 const App = () => {
@@ -52,8 +53,10 @@ const App = () => {
           <Route path='/list' element={<GelAllClient></GelAllClient>}></Route>
           <Route path='/form' element={<AddClient></AddClient>}></Route>
           <Route path='/GetAllPayments' element={<GetAllPayments></GetAllPayments>}></Route>
+          <Route path='/AddPayments' element={<AddPayments></AddPayments>}></Route> 
           <Route path='/GetAllMeetings' element={<GetAllMeetings></GetAllMeetings>}></Route> 
-          <Route path='/AddMeetings' element={<AddMeetings></AddMeetings>}></Route> 
+          <Route path='/AddMeetings' element={<AddMeetings></AddMeetings>}></Route>
+
 
 
          
